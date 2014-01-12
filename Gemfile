@@ -18,4 +18,5 @@ gem 'shotgun'
 #testing stuff
 group :test do
 	gem 'rspec'
+	gem 'shoulda-matchers'
 end
