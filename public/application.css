@@ -1,0 +1,35 @@
+/*universal background*/
+/*cool css trick found at: http://css-tricks.com/perfect-full-page-background-image/*/
+html {
+	background: url(images/charleston_harbor.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/*nav bar styling*/
+.nav {
+	position: fixed;
+	min-height: 100%;
+	width: 8em;
+	background-color: white;
+	opacity: 0.4;
+}
+
+.nav-link {
+	color: #333333;
+	text-decoration: none;
+	padding-left: .5em;
+}
+
+.nav-link:hover {
+	color: white;
+}
+
+/*content styling*/
+
+.content {
+	padding-left: 8.5em;
+	display: inline-block;
+}

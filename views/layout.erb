@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="application.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script src="/application.js"></script>
@@ -8,6 +9,10 @@
 </head>
 
 <body>
+	<div class="nav">
+		<%= erb :navbar %>
+	</div>
+
 	<%= yield %>
 </body>
 

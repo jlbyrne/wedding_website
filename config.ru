@@ -7,7 +7,7 @@ configure do
   # This will allow sessions to be stored
   enable :sessions
   #rack sets up the environment hash, which we can access through the ENV constant
-  set :session_secret, ENV['SESSION_SECRET']
+  set :session_secret, ENV['SESSION_SECRET'] || "secret stuff happening here"
 
   #setting the server to use thin when available, then mongrel or webrick
   set :server, %w[thin mongrel webrick]
