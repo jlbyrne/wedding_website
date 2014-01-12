@@ -11,6 +11,7 @@ html {
 /*general overall stylings*/
 
 h1 {
+	color: #4f4f4f;
 	font-family: 'Amatic SC', cursive;
 	font-size: 4em;
 	margin-top: .1em;
@@ -19,11 +20,13 @@ h1 {
 }
 
 p {
+	color: #4f4f4f;
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 1em;
 }
 
 a {
+	color: #4f4f4f;
 	text-decoration: none;
 }
 
@@ -36,17 +39,26 @@ a:hover {
 	position: fixed;
 	min-height: 100%;
 	width: 8em;
-	background-color: rgba(255,255,255,0.4);
+	background-color: rgba(255,255,255,0.5);
 }
 
 .nav-link {
-	color: #333333;
 	padding-left: .5em;
+}
+
+/*container styling*/
+
+.container {
+	padding-left: 9em;
+	width: 80%;
+	display: inline-block;
 }
 
 /*content styling*/
 
 .content {
-	padding-left: 8.5em;
-	display: inline-block;
+	background-color: rgba(255,255,255,0.5); 
+	min-height: 400px;
+	padding: 1em;
+	margin: 0 auto;
 }
