@@ -6,29 +6,29 @@ get '/' do
 end
 
 get '/guest_list' do
-	erb :guest_list
+	erb :guest_list, layout: false
 end
 
 get '/rsvp' do
-	erb :rsvp
+	erb :rsvp, layout: false
 end
 
 get '/itinerary' do
-	erb :itinerary
+	erb :itinerary, layout: false
 end
 
 get '/accomodations' do
-	erb :accomodations
+	erb :accomodations, layout: false
 end
 
 get '/charleston' do
-	erb :charleston
+	erb :charleston, layout: false
 end
 
 get '/our_story' do
-	erb :our_story
+	erb :our_story, layout: false
 end
 
 get '/registry' do
-	erb :registry
+	erb :registry, layout: false
 end
