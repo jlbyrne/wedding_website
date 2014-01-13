@@ -32,3 +32,7 @@ end
 get '/registry' do
 	erb :registry, layout: false
 end
+
+post '/name_check' do
+	#TODO: create RSVP form and logic
+end

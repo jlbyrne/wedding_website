@@ -1,7 +1,18 @@
-
+<div class="container">
 	<div class='header'>
 		<h1>RSVP</h1>
 	</div>
 	<div class='content'>
-		<p>rsvp form here</p>
+		<div class='rsvp'>
+			<p>Enter Your name below to start RSVP-ing!</p>
+			<% if @error %>
+			<p><%= @error %></p>
+			<% end %>
+			<form action="/name_check" method="post">
+				<input type="text" name="firstname" placeholder="First Name">
+				<input type="text" name="lastname" placeholder="Last Name">
+				<input class="button" id="rsvp_name_button" type="submit" value="start">
+			</form>
+		</div>
 	</div>
+</div>
