@@ -35,5 +35,12 @@ get '/registry' do
 end
 
 post '/name_check' do
-	#TODO: create RSVP form and logic
+	guest = (Guest.where(:first_name => params[:firstname], :last_name => params[:firstname])).first
+	if guest
+		@family = Guest.where(:family_id => guest.family_id)
+		erb :rsvp_form
+	else
+		@error = "We appreciate your interest, but unfortunately we can't invite everyone we would like."
+		erb :rsvp
+	end
 end

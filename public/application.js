@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 	navBarHandler();
+	rsvpFormHandler();
 
 });
 
@@ -18,6 +19,15 @@ function navBarHandler() {
 			//to the page.
 			var containerData = $(data).filter('div.container');
 			$(".container").replaceWith(containerData);
+		});
+	});
+}
+
+function rsvpFormHandler() {
+	$("#rsvp_name_button").submit(function(e) {
+		e.preventDefault();
+		$.post("/name_check", function(data) {
+			$("container").html(data);
 		});
 	});
 }

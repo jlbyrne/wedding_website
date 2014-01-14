@@ -6,4 +6,5 @@ describe Guest do
 	it { should validate_presence_of(:city)}
 	it { should validate_presence_of(:family_id)}
 	it { should validate_uniqueness_of(:email)}
+	it { should validate_uniqueness_of(:family_id)}
 end
