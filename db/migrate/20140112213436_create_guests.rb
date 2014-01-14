@@ -9,7 +9,7 @@ class CreateGuests < ActiveRecord::Migration
   		t.boolean :responded, default: false
   		t.boolean :attending
   		t.string :dinner_choice
-  		t.belongs_to :family
+  		t.integer :family_id
 
   		t.timestamps
   	end

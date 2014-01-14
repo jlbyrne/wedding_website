@@ -7,6 +7,7 @@ end
 
 get '/guest_list' do
 	erb :guest_list, layout: false
+	session[:guest] = "blah blah blah" 
 end
 
 get '/rsvp' do

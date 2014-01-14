@@ -1,6 +1,6 @@
-#setting this file as the main app file.  
 require File.join(File.dirname(__FILE__), 'environment')
 
+#setting this file as the main app file.  
 set :app_file, __FILE__
 
 configure do
