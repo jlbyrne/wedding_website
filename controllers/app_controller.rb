@@ -34,10 +34,7 @@ get '/registry' do
 end
 
 post '/name_check' do
-	p params
-	guest = (Guest.where(:first_name => params[:firstname], :last_name => params[:lastname])).first
-	p "*"*100
-	p guest
+	guest = (Guest.where(:first_name => params[:firstname].downcase, :last_name => params[:lastname].downcase)).first
 	if guest
 		@family = Guest.where(:family_id => guest.family_id)
 		erb :rsvp_form, layout: false
