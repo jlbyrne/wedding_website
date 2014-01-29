@@ -5,11 +5,6 @@ get '/' do
   erb :index
 end
 
-get '/guest_list' do
-	erb :guest_list, layout: false
-	session[:guest] = "blah blah blah" 
-end
-
 get '/rsvp' do
 	erb :rsvp, layout: false
 end
