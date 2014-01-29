@@ -8,7 +8,7 @@
 			<% if @error %>
 			<p><%= @error %></p>
 			<% end %>
-			<form action="/name_check" method="post">
+			<form action="/name_check" method="post" class="name-check">
 				<input type="text" name="firstname" placeholder="First Name">
 				<input type="text" name="lastname" placeholder="Last Name">
 				<input class="button" id="rsvp_name_button" type="submit" value="start">

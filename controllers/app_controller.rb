@@ -34,13 +34,16 @@ get '/registry' do
 end
 
 post '/name_check' do
-	guest = (Guest.where(:first_name => params[:firstname], :last_name => params[:firstname])).first
+	p params
+	guest = (Guest.where(:first_name => params[:firstname], :last_name => params[:lastname])).first
+	p "*"*100
+	p guest
 	if guest
 		@family = Guest.where(:family_id => guest.family_id)
-		erb :rsvp_form
+		erb :rsvp_form, layout: false
 	else
 		#TODO: come up with a better 'you're not invited' message
 		@error = "We appreciate your interest in our special day, but unfortunately we can't invite everyone we would like."
-		erb :rsvp
+		erb :rsvp, layout: false
 	end
 end

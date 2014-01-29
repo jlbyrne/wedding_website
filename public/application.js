@@ -24,10 +24,12 @@ function navBarHandler() {
 }
 
 function rsvpFormHandler() {
-	$("#rsvp_name_button").submit(function(e) {
-		e.preventDefault();
-		$.post("/name_check", function(data) {
-			$(".content").replaceWith(data);
+	$(document).on('click', '#rsvp_name_button', function(){
+		$(".name-check").submit(function(e) {
+			e.preventDefault();
+			$.post("/name_check", $(".name-check").serialize(), function(data) {
+				$(".container").replaceWith(data);
+			});
 		});
-	});
+	})	
 }
