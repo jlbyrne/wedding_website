@@ -1,0 +1,17 @@
+<div class="content">
+	<form>
+		<% if @errors %>
+			<% @errors.each do |error| %>
+				<%= error.full_messages %>
+			<% end %>
+		<% end %>
+		<p>Thanks for taking the time to RSVP!  We have just a few questions for you:</p>
+		<p>If you are comfortable sharing your email address with us, please enter it below.  We will only be using it to send out updates should there be a change of plans.</p>
+		<input type='email' name='email' placeholder="email address">
+		<% @family.each do |guest| %>
+		<!-- hidden html field with guest id here -->
+			<p><%= guest.first_name guest.last_name%> is <input type='radio'></p>
+		<% end %>
+		<input type='submit' name='RSVP'>
+	</form>
+</div>

@@ -18,6 +18,10 @@ get '/itinerary' do
 	erb :itinerary, layout: false
 end
 
+get '/flights' do
+	erb :flights, layout: false
+end	
+
 get '/accomodations' do
 	erb :accomodations, layout: false
 end
@@ -40,7 +44,8 @@ post '/name_check' do
 		@family = Guest.where(:family_id => guest.family_id)
 		erb :rsvp_form
 	else
-		@error = "We appreciate your interest, but unfortunately we can't invite everyone we would like."
+		#TODO: come up with a better 'you're not invited' message
+		@error = "We appreciate your interest in our special day, but unfortunately we can't invite everyone we would like."
 		erb :rsvp
 	end
 end

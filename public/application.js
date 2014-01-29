@@ -27,7 +27,7 @@ function rsvpFormHandler() {
 	$("#rsvp_name_button").submit(function(e) {
 		e.preventDefault();
 		$.post("/name_check", function(data) {
-			$("container").html(data);
+			$(".content").replaceWith(data);
 		});
 	});
 }
