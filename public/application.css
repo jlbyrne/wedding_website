@@ -1,7 +1,21 @@
+/* Fonts */
+@font-face {
+  font-family: 'CaviarDreams';
+  src: url(/CaviarDreams.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'CaviarDreams-bold';
+  src: url(/CaviarDreams_Bold.ttf) format("truetype");
+}
+
 /*universal background*/
 /*cool css trick found at: http://css-tricks.com/perfect-full-page-background-image/*/
 html {
-	background: url(images/charleston_harbor.jpg) no-repeat center center fixed;
+	background-image: url(/images/Church-Street.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -11,22 +25,22 @@ html {
 /*general overall stylings*/
 
 h1 {
-	color: #4f4f4f;
-	font-family: 'Amatic SC', sans-serif;
-	font-size: 4em;
+	color: #545558;
+	font-family: 'CaviarDreams', sans-serif;
+	font-size: 3.5em;
 	margin-top: .1em;
 	margin-bottom: .1em;
 	text-align: center;
 }
 
 p {
-	color: #4f4f4f;
-	font-family: 'Josefin Sans', sans-serif;
+	color: #545558;
+	font-family: 'CaviarDreams', sans-serif;
 	font-size: 1em;
 }
 
 a {
-	color: #4f4f4f;
+	color: #545558;
 	text-decoration: none;
 }
 
@@ -46,11 +60,20 @@ a:hover {
 	padding-left: .5em;
 }
 
+.nav-link.home {
+	padding-left: 0px;
+}
+
+.nav-link img {
+	width: 120px;
+}
+
 /*container styling*/
 
 .container {
 	padding-left: 9em;
 	width: 80%;
+	max-width: 1200px;
 	display: inline-block;
 }
 
@@ -58,7 +81,7 @@ a:hover {
 
 .content {
 	background-color: rgba(255,255,255,0.5); 
-	min-height: 400px;
+	min-height: 600px;
 	padding: 1em;
 	margin: 0 auto;
 }

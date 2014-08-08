@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	navBarHandler();
-	rsvpFormHandler();
+	// backgroundHandler();
 
 });
 
@@ -17,19 +17,25 @@ function navBarHandler() {
 			// the 'welcome' link also can't be rendered without the layout,
 			//so we're making sure here that only the container html is added 
 			//to the page.
+			backgroundHandler(route);
 			var containerData = $(data).filter('div.container');
 			$(".container").replaceWith(containerData);
 		});
 	});
 }
 
-function rsvpFormHandler() {
-	$(document).on('click', '#rsvp_name_button', function(){
-		$(".name-check").submit(function(e) {
-			e.preventDefault();
-			$.post("/name_check", $(".name-check").serialize(), function(data) {
-				$(".container").replaceWith(data);
-			});
-		});
-	})	
+function backgroundHandler(id) {
+	if (id === "charleston"){
+		$("html").css("background-image", "url(/images/king_st.jpg)");
+	} else if ( id === "accomodations" ) {
+		$("html").css("background-image", "url(/images/cityview.jpg)");
+	} else if ( id === "itinerary" ) {
+		$("html").css("background-image", "url(/images/aquarium.jpg)");
+	} else if ( id === "our_story" ) {
+		$("html").css("background-image", "url(/images/sol_and_jenny.jpg)");
+	} else if ( id === "registry" ) {
+		$("html").css("background-image", "url(/images/market.jpg)");
+	} else {
+		$("html").css("background-image", "url(/images/Church-Street.jpg)");
+	}
 }
