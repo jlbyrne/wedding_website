@@ -17,10 +17,6 @@ get '/charleston' do
 	erb :charleston, layout: false
 end
 
-get '/our_story' do
-	erb :our_story, layout: false
-end
-
 get '/registry' do
 	erb :registry, layout: false
 end
