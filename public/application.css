@@ -116,6 +116,11 @@ a.nav-link:hover {
 }
 
 .index .img-wrapper img {
-	width: 400px;
+	/*width: 400px;*/
 	border: solid 3px rgba(255,255,255,0.6);
+}
+
+
+.img-wrapper .our-story-img {
+	width: 100%;
 }
