@@ -33,7 +33,7 @@ h1 {
 	text-align: center;
 }
 
-p, li, div, .address-line {
+p, li, .address-line {
 	color: #545558;
 	font-family: 'Lato', sans-serif;
 	font-size: 1em;
