@@ -40,7 +40,7 @@ p, li, .address-line {
 	line-height: 1.4em;
 }
 
-h3 {
+h2, h3 {
 	color: #545558;
 	font-family: 'CaviarDreams', sans-serif;
 }
